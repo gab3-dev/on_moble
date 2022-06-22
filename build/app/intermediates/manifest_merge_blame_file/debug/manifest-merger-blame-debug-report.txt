@@ -1,0 +1,270 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.on.entreprise.on_mobile"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+9        android:targetSdkVersion="31" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/home/gab3-dev/www/on_moble/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/home/gab3-dev/www/on_moble/android/app/src/debug/AndroidManifest.xml:6:22-64
+15
+16    <queries>
+16-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-24:15
+17        <intent>
+17-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:18
+18            <action android:name="android.accounts.AccountAuthenticator" />
+18-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-76
+18-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:13:21-73
+19        </intent>
+20        <!-- Allows the app to load an icon corresponding to the custom MIME type. -->
+21        <intent>
+21-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-23:18
+22            <action android:name="android.intent.action.VIEW" />
+22-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-65
+22-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:17:21-62
+23
+24            <data
+24-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-22:44
+25                android:host="com.android.contacts"
+25-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:20:17-52
+26                android:mimeType="vnd.android.cursor.item/*"
+26-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:21:17-61
+27                android:scheme="content" />
+27-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:22:17-41
+28        </intent>
+29    </queries>
+30
+31    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+31-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:24:5-79
+31-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:24:22-76
+32
+33    <application
+34        android:name="android.app.Application"
+35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+35-->[androidx.core:core:1.6.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/14b93615368c2249f1830e26ca064ab5/core-1.6.0/AndroidManifest.xml:24:18-86
+36        android:debuggable="true"
+37        android:icon="@mipmap/launcher_icon"
+38        android:label="On Mobile" >
+39        <activity
+40            android:name="com.on.entreprise.on_mobile.MainActivity"
+41            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+42            android:exported="true"
+43            android:hardwareAccelerated="true"
+44            android:launchMode="singleTop"
+45            android:theme="@style/LaunchTheme"
+46            android:windowSoftInputMode="adjustResize" >
+47
+48            <!--
+49                 Specifies an Android theme to apply to this Activity as soon as
+50                 the Android process has started. This theme is visible to the user
+51                 while the Flutter UI initializes. After that, this theme continues
+52                 to determine the Window background behind the Flutter UI.
+53            -->
+54            <meta-data
+55                android:name="io.flutter.embedding.android.NormalTheme"
+56                android:resource="@style/NormalTheme" />
+57
+58            <intent-filter>
+59                <action android:name="android.intent.action.MAIN" />
+60
+61                <category android:name="android.intent.category.LAUNCHER" />
+62            </intent-filter>
+63        </activity>
+64        <!--
+65             Don't delete the meta-data below.
+66             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+67        -->
+68        <meta-data
+69            android:name="flutterEmbedding"
+70            android:value="2" />
+71
+72        <service
+72-->[:firebase_auth] /home/gab3-dev/www/on_moble/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+73            android:name="com.google.firebase.components.ComponentDiscoveryService"
+73-->[:firebase_auth] /home/gab3-dev/www/on_moble/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+74            android:directBootAware="true"
+74-->[com.google.firebase:firebase-common:20.1.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:35:13-43
+75            android:exported="false" >
+75-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:66:13-37
+76            <meta-data
+76-->[:firebase_auth] /home/gab3-dev/www/on_moble/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+77                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+77-->[:firebase_auth] /home/gab3-dev/www/on_moble/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+78                android:value="com.google.firebase.components.ComponentRegistrar" />
+78-->[:firebase_auth] /home/gab3-dev/www/on_moble/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+79            <meta-data
+79-->[:firebase_storage] /home/gab3-dev/www/on_moble/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+80                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+80-->[:firebase_storage] /home/gab3-dev/www/on_moble/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
+81                android:value="com.google.firebase.components.ComponentRegistrar" />
+81-->[:firebase_storage] /home/gab3-dev/www/on_moble/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+82            <meta-data
+82-->[:cloud_firestore] /home/gab3-dev/www/on_moble/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+83                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+83-->[:cloud_firestore] /home/gab3-dev/www/on_moble/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-134
+84                android:value="com.google.firebase.components.ComponentRegistrar" />
+84-->[:cloud_firestore] /home/gab3-dev/www/on_moble/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+85            <meta-data
+85-->[:firebase_core] /home/gab3-dev/www/on_moble/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+86                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+86-->[:firebase_core] /home/gab3-dev/www/on_moble/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+87                android:value="com.google.firebase.components.ComponentRegistrar" />
+87-->[:firebase_core] /home/gab3-dev/www/on_moble/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+88            <meta-data
+88-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:67:13-69:85
+89                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+89-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:68:17-109
+90                android:value="com.google.firebase.components.ComponentRegistrar" />
+90-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:69:17-82
+91            <meta-data
+91-->[com.google.firebase:firebase-firestore:24.1.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/194d5be88c5e24bb9d08f12c228fe63c/jetified-firebase-firestore-24.1.0/AndroidManifest.xml:20:13-22:85
+92                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+92-->[com.google.firebase:firebase-firestore:24.1.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/194d5be88c5e24bb9d08f12c228fe63c/jetified-firebase-firestore-24.1.0/AndroidManifest.xml:21:17-111
+93                android:value="com.google.firebase.components.ComponentRegistrar" />
+93-->[com.google.firebase:firebase-firestore:24.1.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/194d5be88c5e24bb9d08f12c228fe63c/jetified-firebase-firestore-24.1.0/AndroidManifest.xml:22:17-82
+94            <meta-data
+94-->[com.google.firebase:firebase-storage:20.0.1] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/a732609d39140ed999dd3f02f1a8340e/jetified-firebase-storage-20.0.1/AndroidManifest.xml:33:13-35:85
+95                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+95-->[com.google.firebase:firebase-storage:20.0.1] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/a732609d39140ed999dd3f02f1a8340e/jetified-firebase-storage-20.0.1/AndroidManifest.xml:34:17-107
+96                android:value="com.google.firebase.components.ComponentRegistrar" />
+96-->[com.google.firebase:firebase-storage:20.0.1] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/a732609d39140ed999dd3f02f1a8340e/jetified-firebase-storage-20.0.1/AndroidManifest.xml:35:17-82
+97        </service>
+98
+99        <provider
+99-->[:image_picker_android] /home/gab3-dev/www/on_moble/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
+100            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+100-->[:image_picker_android] /home/gab3-dev/www/on_moble/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-82
+101            android:authorities="com.on.entreprise.on_mobile.flutter.image_provider"
+101-->[:image_picker_android] /home/gab3-dev/www/on_moble/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-74
+102            android:exported="false"
+102-->[:image_picker_android] /home/gab3-dev/www/on_moble/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
+103            android:grantUriPermissions="true" >
+103-->[:image_picker_android] /home/gab3-dev/www/on_moble/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
+104            <meta-data
+104-->[:image_picker_android] /home/gab3-dev/www/on_moble/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:75
+105                android:name="android.support.FILE_PROVIDER_PATHS"
+105-->[:image_picker_android] /home/gab3-dev/www/on_moble/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
+106                android:resource="@xml/flutter_image_picker_file_paths" />
+106-->[:image_picker_android] /home/gab3-dev/www/on_moble/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-72
+107        </provider>
+108
+109        <uses-library
+109-->[androidx.window:window:1.0.0-beta04] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+110            android:name="androidx.window.extensions"
+110-->[androidx.window:window:1.0.0-beta04] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+111            android:required="false" />
+111-->[androidx.window:window:1.0.0-beta04] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+112        <uses-library
+112-->[androidx.window:window:1.0.0-beta04] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+113            android:name="androidx.window.sidecar"
+113-->[androidx.window:window:1.0.0-beta04] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+114            android:required="false" />
+114-->[androidx.window:window:1.0.0-beta04] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+115
+116        <activity
+116-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:27:9-44:20
+117            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+117-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:28:13-80
+118            android:excludeFromRecents="true"
+118-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:29:13-46
+119            android:exported="true"
+119-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:30:13-36
+120            android:launchMode="singleTask"
+120-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:31:13-44
+121            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+121-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:32:13-72
+122            <intent-filter>
+122-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:33:13-43:29
+123                <action android:name="android.intent.action.VIEW" />
+123-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-65
+123-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:17:21-62
+124
+125                <category android:name="android.intent.category.DEFAULT" />
+125-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
+125-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
+126                <category android:name="android.intent.category.BROWSABLE" />
+126-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:17-78
+126-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:27-75
+127
+128                <data
+128-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-22:44
+129                    android:host="firebase.auth"
+129-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:20:17-52
+130                    android:path="/"
+131                    android:scheme="genericidp" />
+131-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:22:17-41
+132            </intent-filter>
+133        </activity>
+134        <activity
+134-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:45:9-62:20
+135            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+135-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:46:13-79
+136            android:excludeFromRecents="true"
+136-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:47:13-46
+137            android:exported="true"
+137-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:48:13-36
+138            android:launchMode="singleTask"
+138-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:49:13-44
+139            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+139-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:50:13-72
+140            <intent-filter>
+140-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:51:13-61:29
+141                <action android:name="android.intent.action.VIEW" />
+141-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-65
+141-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:17:21-62
+142
+143                <category android:name="android.intent.category.DEFAULT" />
+143-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:17-76
+143-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:36:27-73
+144                <category android:name="android.intent.category.BROWSABLE" />
+144-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:17-78
+144-->[com.google.firebase:firebase-auth:21.0.3] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/0cd31a8007b82ec10dce55ca37be1d81/jetified-firebase-auth-21.0.3/AndroidManifest.xml:37:27-75
+145
+146                <data
+146-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-22:44
+147                    android:host="firebase.auth"
+147-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:20:17-52
+148                    android:path="/"
+149                    android:scheme="recaptcha" />
+149-->[:contacts_service] /home/gab3-dev/www/on_moble/build/contacts_service/intermediates/library_manifest/debug/AndroidManifest.xml:22:17-41
+150            </intent-filter>
+151        </activity>
+152
+153        <provider
+153-->[com.google.firebase:firebase-common:20.1.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:26:9-31:39
+154            android:name="com.google.firebase.provider.FirebaseInitProvider"
+154-->[com.google.firebase:firebase-common:20.1.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:27:13-77
+155            android:authorities="com.on.entreprise.on_mobile.firebaseinitprovider"
+155-->[com.google.firebase:firebase-common:20.1.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:28:13-72
+156            android:directBootAware="true"
+156-->[com.google.firebase:firebase-common:20.1.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:29:13-43
+157            android:exported="false"
+157-->[com.google.firebase:firebase-common:20.1.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:30:13-37
+158            android:initOrder="100" />
+158-->[com.google.firebase:firebase-common:20.1.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:31:13-36
+159
+160        <activity
+160-->[com.google.android.gms:play-services-base:18.0.1] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+161            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+161-->[com.google.android.gms:play-services-base:18.0.1] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+162            android:exported="false"
+162-->[com.google.android.gms:play-services-base:18.0.1] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+163            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+163-->[com.google.android.gms:play-services-base:18.0.1] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+164
+165        <meta-data
+165-->[com.google.android.gms:play-services-basement:18.0.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/4a1e8147c3db656939cfc830651ce63e/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+166            android:name="com.google.android.gms.version"
+166-->[com.google.android.gms:play-services-basement:18.0.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/4a1e8147c3db656939cfc830651ce63e/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+167            android:value="@integer/google_play_services_version" />
+167-->[com.google.android.gms:play-services-basement:18.0.0] /home/gab3-dev/.gradle/caches/transforms-2/files-2.1/4a1e8147c3db656939cfc830651ce63e/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+168    </application>
+169
+170</manifest>

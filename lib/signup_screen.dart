@@ -66,17 +66,17 @@ class _SignUpState extends State<SignUp> {
   }
 
   _signUpState(user) async {
-    // String name = _controllerName.text;
-    // String email = _controllerEmail.text;
-    // String phone = _controllerPhone.text;
-    // Map<String, dynamic> toMap() {
-    //   final Map<String, dynamic> map = <String, dynamic>{
-    //     'name': name,
-    //     'email': email,
-    //     'phone': phone,
-    //   };
-    //   return map;
-    // }
+    String name = _controllerName.text;
+    String email = _controllerEmail.text;
+    String phone = _controllerPhone.text;
+    Map<String, dynamic> toMap() {
+      final Map<String, dynamic> map = <String, dynamic>{
+        'name': name,
+        'email': email,
+        'phone': phone,
+      };
+      return map;
+    }
 
     FirebaseAuth.instance
         .createUserWithEmailAndPassword(
@@ -84,10 +84,10 @@ class _SignUpState extends State<SignUp> {
       password: user.password,
     )
         .then((user) {
-      // FirebaseFirestore.instance
-      //     .collection('users')
-      //     .doc(user.user?.uid)
-      //     .set(toMap());
+      FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.user?.uid)
+          .set(toMap());
       setState(() {
         _error = "";
         _success = "Usuário criado com sucesso";

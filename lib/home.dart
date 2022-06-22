@@ -12,18 +12,18 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> with TickerProviderStateMixin {
   late TabController _tabController;
 
-  List<String> menuItem = {"Configuracoes", "Deslogar"} as List<String>;
+  final List<String> menuItem = ['Configuração', 'Deslogar'];
 
   @override
   void initState() {
     super.initState();
-//    _recuperarDadosUsuario();
+    //_recuperarDadosUsuario();
     _tabController = TabController(length: 2, vsync: this);
   }
 
   _chooseMenuItem(String itemChoosed) {
     switch (itemChoosed) {
-      case "Configuracoes":
+      case "Configuração":
         Navigator.pushNamed(context, '/configuration');
         break;
       case "Deslogar":
@@ -49,20 +49,22 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
               fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
           controller: _tabController,
           indicatorColor: Colors.white,
-          tabs: const <Widget>[AbaConversas(), AbaContatos()], //Widget
+          tabs: const [Text("Conversas"), Text("Contatos")], //Widget
         ),
         actions: <Widget>[
-          PopupMenuButton<String>(
-            onSelected: _chooseMenuItem,
-            itemBuilder: (context) {
-              return menuItem.map((String item) {
-                return PopupMenuItem<String>(
-                  value: item,
-                  child: Text(item),
-                );
-              }).toList();
-            },
-          )
+          Padding(padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+            child: PopupMenuButton<String>(
+              onSelected: _chooseMenuItem,
+              itemBuilder: (BuildContext context) {
+                return menuItem.map((String item) {
+                  return PopupMenuItem<String>(
+                    value: item,
+                    child: Text(item),
+                  );
+                }).toList();
+              },
+            ),
+          ),
         ],
       ),
       body: TabBarView(

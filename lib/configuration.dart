@@ -16,7 +16,7 @@ class _ConfigurationState extends State<Configuration> {
   final TextEditingController _controllerName = TextEditingController();
   late File _image;
   late String _idUserLogged;
-  late String _urlImageRetrieved;
+  String _urlImageRetrieved = "";
 
   bool _uploadingImage = false;
 

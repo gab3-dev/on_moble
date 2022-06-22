@@ -40,7 +40,7 @@ class _LoginState extends State<Login> {
     FirebaseAuth.instance
         .signInWithEmailAndPassword(email: user.email, password: user.password)
         .then((user) {
-      Navigator.pushNamed(context, '/home');
+      Navigator.pushNamedAndRemoveUntil(context, '/home', (_) => false);
     }).catchError((e) {
       setState(() {
         _error = e.message;

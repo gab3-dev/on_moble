@@ -16,7 +16,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const SignUp());
       case '/home':
         return MaterialPageRoute(builder: (_) => const Home());
-      case '/config':
+      case '/configuration':
         return MaterialPageRoute(builder: (_) => const Configuration());
       case '/messages':
         return MaterialPageRoute(builder: (_) => const Messages());
