@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:on_mobile/model/User.dart' as us;
+import 'package:on_mobile/model/user.dart' as us;
 
 String enter = "Entrar";
 
@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
             "Preencha o campo senha, ele não pode conter menos de 8 caracteres";
       });
     } else {
-      us.User user = us.User("", email, password, "");
+      us.User user = us.User();
       user.email = email;
       user.password = password;
       _loginState(user);

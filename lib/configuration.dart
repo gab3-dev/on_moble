@@ -51,6 +51,13 @@ class _ConfigurationState extends State<Configuration> {
     });
   }
 
+  _updateNameFirestore() {
+    String name = _controllerName.text;
+    FirebaseFirestore db = FirebaseFirestore.instance;
+    DocumentReference ref = db.collection("users").doc(_idUserLogged);
+    ref.update({'name': name});
+  }
+
   Future _uploadImage() async {
     FirebaseStorage storage = FirebaseStorage.instance;
     Reference dirRoot = storage.ref();
@@ -89,6 +96,17 @@ class _ConfigurationState extends State<Configuration> {
       FirebaseAuth auth = FirebaseAuth.instance;
       User userLogged = auth.currentUser!;
       _idUserLogged = userLogged.uid;
+
+      FirebaseFirestore db = FirebaseFirestore.instance;
+      DocumentSnapshot snapshot =
+          await db.collection("users").doc(_idUserLogged).get();
+
+      Map<String, dynamic> data = snapshot.data() as Map<String, dynamic>;
+      _controllerName.text = data["name"];
+
+      if (data["urlImage"] != null) {
+        _urlImageRetrieved = data["urlImage"];
+      }
     }
   }
 
@@ -102,7 +120,12 @@ class _ConfigurationState extends State<Configuration> {
           child: SingleChildScrollView(
               child: Column(
             children: [
-              _uploadingImage ? const CircularProgressIndicator() : Container(),
+              Container(
+                padding: const EdgeInsets.all(8),
+                child: _uploadingImage
+                    ? const CircularProgressIndicator()
+                    : Container(),
+              ),
               CircleAvatar(
                 radius: 100,
                 backgroundColor: Colors.white,
@@ -154,7 +177,9 @@ class _ConfigurationState extends State<Configuration> {
                         padding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(32))),
-                    onPressed: () {}),
+                    onPressed: () {
+                      _updateNameFirestore();
+                    }),
               ),
             ],
           )),

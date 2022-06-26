@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'model/User.dart';
+import 'model/user.dart';
 
 class Messages extends StatefulWidget {
   const Messages({Key? key}) : super(key: key);
@@ -108,7 +108,7 @@ class _MessagesState extends State<Messages> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Provisorio"),
+        title: const Text("Provisorio"),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'model/User.dart' as us;
+import 'model/user.dart' as us;
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -51,7 +51,7 @@ class _SignUpState extends State<SignUp> {
         _success = "";
       });
     } else {
-      us.User user = us.User(name, email, password, phone);
+      us.User user = us.User();
       user.name = name;
       user.email = email;
       user.password = password;
