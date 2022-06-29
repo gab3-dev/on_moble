@@ -33,7 +33,7 @@ class _AbaConversasState extends State<AbaConversas> {
             contentPadding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
             leading: CircleAvatar(
               maxRadius: 30,
-              backgroundColor: Colors.grey,
+              backgroundColor: Theme.of(context).primaryColorLight,
               backgroundImage: NetworkImage(chat.urlphoto),
             ),
             title: Text(
@@ -41,7 +41,10 @@ class _AbaConversasState extends State<AbaConversas> {
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
             subtitle: Text(chat.message,
-                style: const TextStyle(fontSize: 12, color: Colors.grey)),
+                style: const TextStyle(
+                    fontSize: 12,
+                    color: Colors.grey,
+                    fontStyle: FontStyle.italic)),
           );
         });
   }

@@ -28,6 +28,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         break;
       case "Deslogar":
         _logOutUser();
+        Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
         break;
     }
   }
@@ -44,15 +45,19 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       appBar: AppBar(
         title: const Text("On Mobile"),
         bottom: TabBar(
+          labelColor: Theme.of(context).primaryColorLight,
           indicatorWeight: 4,
-          labelStyle: const TextStyle(
-              fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+          labelStyle: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).secondaryHeaderColor),
           controller: _tabController,
-          indicatorColor: Colors.white,
+          indicatorColor: Theme.of(context).primaryColor,
           tabs: const [Text("Conversas"), Text("Contatos")], //Widget
         ),
         actions: <Widget>[
-          Padding(padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
             child: PopupMenuButton<String>(
               onSelected: _chooseMenuItem,
               itemBuilder: (BuildContext context) {

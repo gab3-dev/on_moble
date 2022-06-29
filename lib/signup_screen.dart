@@ -140,7 +140,7 @@ class _SignUpState extends State<SignUp> {
                             const EdgeInsets.fromLTRB(32, 16, 32, 16),
                         hintText: 'Nome',
                         filled: true,
-                        fillColor: Colors.white,
+                        fillColor: Colors.white60,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(32)))),
               ),
@@ -155,7 +155,7 @@ class _SignUpState extends State<SignUp> {
                             const EdgeInsets.fromLTRB(32, 16, 32, 16),
                         hintText: 'E-mail',
                         filled: true,
-                        fillColor: Colors.white,
+                        fillColor: Colors.white60,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(32))),
                   )),
@@ -171,7 +171,7 @@ class _SignUpState extends State<SignUp> {
                             const EdgeInsets.fromLTRB(32, 16, 32, 16),
                         hintText: 'Senha',
                         filled: true,
-                        fillColor: Colors.white,
+                        fillColor: Colors.white60,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(32))),
                   )),
@@ -183,16 +183,18 @@ class _SignUpState extends State<SignUp> {
                     contentPadding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
                     hintText: 'Numero de celular',
                     filled: true,
-                    fillColor: Colors.white,
+                    fillColor: Colors.white60,
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(32))),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 16, bottom: 10),
                 child: ElevatedButton(
-                    child: const Text(
+                    child: Text(
                       "Cadastrar",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: TextStyle(
+                          color: Theme.of(context).primaryColorLight,
+                          fontSize: 20),
                     ),
                     style: ElevatedButton.styleFrom(
                         primary: Colors.redAccent[700],
@@ -206,9 +208,11 @@ class _SignUpState extends State<SignUp> {
               ),
               Center(
                 child: GestureDetector(
-                  child: const Text(
+                  child: Text(
                     "Ja tem conta ? Entre aqui!",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(
+                        color: Theme.of(context).primaryColorLight,
+                        fontSize: 16),
                   ),
                   onTap: () {
                     Navigator.pushNamedAndRemoveUntil(
@@ -220,7 +224,7 @@ class _SignUpState extends State<SignUp> {
                   child: Text(
                 _error,
                 style: const TextStyle(
-                  color: Colors.red,
+                  color: Colors.orange,
                   fontSize: 18,
                 ),
               )),

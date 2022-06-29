@@ -53,7 +53,7 @@ class _LoginState extends State<Login> {
     User userFirebase = auth.currentUser!;
     // ignore: unnecessary_null_comparison
     if (userFirebase != null) {
-      Navigator.pushNamed(context, '/home');
+      Navigator.pushNamedAndRemoveUntil(context, '/home', (_) => false);
     } else {
       setState(() {
         _error = "Usuário não está logado";
@@ -97,13 +97,15 @@ class _LoginState extends State<Login> {
                 child: TextField(
                     controller: _controllerEmail,
                     keyboardType: TextInputType.emailAddress,
-                    style: const TextStyle(fontSize: 20),
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Theme.of(context).secondaryHeaderColor),
                     decoration: InputDecoration(
                         contentPadding:
                             const EdgeInsets.fromLTRB(32, 16, 32, 16),
                         hintText: 'E-mail',
                         filled: true,
-                        fillColor: Colors.white,
+                        fillColor: Colors.white60,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(32)))),
               ),
@@ -111,23 +113,27 @@ class _LoginState extends State<Login> {
                   controller: _controllerPassword,
                   keyboardType: TextInputType.text,
                   obscureText: true,
-                  style: const TextStyle(fontSize: 20),
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Theme.of(context).secondaryHeaderColor),
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
                       hintText: 'Senha',
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.white60,
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(32)))),
               Padding(
                 padding: const EdgeInsets.only(top: 16, bottom: 10),
                 child: ElevatedButton(
-                    child: const Text(
+                    child: Text(
                       "Entrar",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: TextStyle(
+                          color: Theme.of(context).primaryColorLight,
+                          fontSize: 20),
                     ),
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.redAccent[700],
+                        primary: Theme.of(context).primaryColorDark,
                         padding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(32))),
@@ -138,9 +144,11 @@ class _LoginState extends State<Login> {
               ),
               Center(
                 child: GestureDetector(
-                  child: const Text(
+                  child: Text(
                     "Nao tem conta ? Cadastre-se!",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(
+                        color: Theme.of(context).primaryColorLight,
+                        fontSize: 16),
                   ),
                   onTap: () {
                     Navigator.pushReplacementNamed(context, '/signup');
@@ -151,7 +159,7 @@ class _LoginState extends State<Login> {
                   child: Text(
                 _error,
                 style: const TextStyle(
-                  color: Colors.red,
+                  color: Colors.orange,
                   fontSize: 18,
                 ),
               )),

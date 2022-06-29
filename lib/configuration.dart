@@ -91,23 +91,29 @@ class _ConfigurationState extends State<Configuration> {
         });
       }
     });
+  }
 
-    _retrieveDataUser() async {
-      FirebaseAuth auth = FirebaseAuth.instance;
-      User userLogged = auth.currentUser!;
-      _idUserLogged = userLogged.uid;
+  _retrieveDataUser() async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    User userLogged = auth.currentUser!;
+    _idUserLogged = userLogged.uid;
 
-      FirebaseFirestore db = FirebaseFirestore.instance;
-      DocumentSnapshot snapshot =
-          await db.collection("users").doc(_idUserLogged).get();
+    FirebaseFirestore db = FirebaseFirestore.instance;
+    DocumentSnapshot snapshot =
+        await db.collection("users").doc(_idUserLogged).get();
 
-      Map<String, dynamic> data = snapshot.data() as Map<String, dynamic>;
-      _controllerName.text = data["name"];
+    Map<String, dynamic> data = snapshot.data() as Map<String, dynamic>;
+    _controllerName.text = data["name"];
 
-      if (data["urlImage"] != null) {
-        _urlImageRetrieved = data["urlImage"];
-      }
+    if (data["urlImage"] != null) {
+      _urlImageRetrieved = data["urlImage"];
     }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _retrieveDataUser();
   }
 
   @override
@@ -128,7 +134,7 @@ class _ConfigurationState extends State<Configuration> {
               ),
               CircleAvatar(
                 radius: 100,
-                backgroundColor: Colors.white,
+                backgroundColor: Theme.of(context).primaryColorLight,
                 backgroundImage: _urlImageRetrieved != null
                     ? NetworkImage(_urlImageRetrieved)
                     : null,
@@ -155,25 +161,29 @@ class _ConfigurationState extends State<Configuration> {
                 child: TextField(
                     controller: _controllerName,
                     keyboardType: TextInputType.text,
-                    style: const TextStyle(fontSize: 20),
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Theme.of(context).secondaryHeaderColor),
                     decoration: InputDecoration(
                         contentPadding:
                             const EdgeInsets.fromLTRB(32, 16, 32, 16),
                         hintText: 'Nome',
                         filled: true,
-                        fillColor: Colors.white,
+                        fillColor: Colors.white70,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(32)))),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 16, bottom: 10),
                 child: ElevatedButton(
-                    child: const Text(
-                      "Cadastrar",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    child: Text(
+                      "Salvar",
+                      style: TextStyle(
+                          color: Theme.of(context).primaryColorLight,
+                          fontSize: 20),
                     ),
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.redAccent[700],
+                        primary: Theme.of(context).primaryColorDark,
                         padding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(32))),

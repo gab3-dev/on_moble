@@ -15,9 +15,10 @@ void main() async {
     home: const Login(),
     theme: ThemeData(
       colorScheme: ColorScheme.fromSwatch().copyWith(
-        primary: const Color(0xff6E0C00),
-        secondary: const Color(0xfff9a3c1),
-      ),
+          primary: const Color(0xff6E0C00), brightness: Brightness.dark),
+      secondaryHeaderColor: const Color(0xff6E0C00),
+      primaryColorDark: const Color(0xff6E0C00),
+      primaryColorLight: Colors.white,
     ),
     initialRoute: '/',
     onGenerateRoute: RouteGenerator.generateRoute,
