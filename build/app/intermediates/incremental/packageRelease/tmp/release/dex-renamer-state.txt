@@ -1,4 +1,4 @@
-#Wed Jun 29 18:30:26 BRT 2022
+#Thu Jun 30 03:02:26 BRT 2022
 base.0=/home/gab3-dev/www/on_moble/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

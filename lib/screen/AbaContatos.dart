@@ -11,6 +11,7 @@ class AbaContatos extends StatefulWidget {
 }
 
 class _AbaContatosState extends State<AbaContatos> {
+  final String _idUserLogged = (FirebaseAuth.instance.currentUser?.uid ?? "");
   Future<List<Contact>> _getContacts() async {
     FirebaseFirestore db = FirebaseFirestore.instance;
 
@@ -20,13 +21,14 @@ class _AbaContatosState extends State<AbaContatos> {
 
     for (DocumentSnapshot doc in querySnapshot.docs) {
       var data = doc.data() as Map<String, dynamic>;
-      if (data["id"] != FirebaseAuth.instance.currentUser?.uid) {
-        listContact.add(Contact(
-          name: data["name"],
-          urlImage: data["urlImage"],
-          email: data["email"],
-        ));
+      if (data["id"] == _idUserLogged) {
+        continue;
       }
+      listContact.add(Contact(
+        name: data["name"],
+        email: data["email"],
+        urlImage: data["urlImage"],
+      ));
     }
     return listContact;
   }
@@ -62,9 +64,9 @@ class _AbaContatosState extends State<AbaContatos> {
             return ListView.builder(
               itemCount: snapshot.data?.length,
               itemBuilder: (context, index) {
-                List<Contact>? listItens = snapshot.data;
+                List<Contact> listItens = snapshot.data as List<Contact>;
 
-                Contact contact = listItens![index];
+                Contact contact = listItens[index];
 
                 return ListTile(
                   contentPadding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
@@ -84,8 +86,8 @@ class _AbaContatosState extends State<AbaContatos> {
                         fontStyle: FontStyle.italic),
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, "/chat",
-                        arguments: snapshot.data![index]);
+                    Navigator.pushNamed(context, "/messages",
+                        arguments: listItens[index]);
                   },
                 );
               },

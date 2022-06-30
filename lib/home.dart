@@ -43,22 +43,22 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("On Mobile"),
+        title: Text(
+          "On Mobile",
+          style: TextStyle(color: Theme.of(context).secondaryHeaderColor),
+        ),
         bottom: TabBar(
-          labelColor: Theme.of(context).primaryColorLight,
-          indicatorWeight: 4,
-          labelStyle: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: Theme.of(context).secondaryHeaderColor),
+          labelPadding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+          indicatorWeight: 3,
+          labelStyle: const TextStyle(fontSize: 18),
           controller: _tabController,
-          indicatorColor: Theme.of(context).primaryColor,
           tabs: const [Text("Conversas"), Text("Contatos")], //Widget
         ),
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
             child: PopupMenuButton<String>(
+              icon: const Icon(Icons.more_vert),
               onSelected: _chooseMenuItem,
               itemBuilder: (BuildContext context) {
                 return menuItem.map((String item) {

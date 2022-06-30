@@ -10,7 +10,6 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  String value = "";
   // Create a text controller and use it to retrieve the current value
   final TextEditingController _controllerName = TextEditingController();
   final TextEditingController _controllerEmail = TextEditingController();
@@ -69,11 +68,12 @@ class _SignUpState extends State<SignUp> {
     String name = _controllerName.text;
     String email = _controllerEmail.text;
     String phone = _controllerPhone.text;
-    Map<String, dynamic> toMap() {
+    Map<String, dynamic> toMap(String uid) {
       final Map<String, dynamic> map = <String, dynamic>{
         'name': name,
         'email': email,
         'phone': phone,
+        'urlImage': uid + ".jpg",
       };
       return map;
     }
@@ -87,11 +87,11 @@ class _SignUpState extends State<SignUp> {
       FirebaseFirestore.instance
           .collection('users')
           .doc(user.user?.uid)
-          .set(toMap());
+          .set(toMap(user.user?.uid as String));
       setState(() {
         _error = "";
         _success = "Usuário criado com sucesso";
-        Navigator.pushNamed(context, '/home');
+        Navigator.pushNamedAndRemoveUntil(context, '/home', (_) => false);
       });
     }).catchError((error) {
       setState(() {

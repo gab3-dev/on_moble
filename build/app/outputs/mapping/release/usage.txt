@@ -20739,8 +20739,8 @@ com.google.common.collect.Synchronized$SynchronizedList
 com.google.protobuf.DescriptorProtos$OneofOptions$Builder
 com.google.api.Endpoint$1
 com.google.gson.internal.$Gson$Types$GenericArrayTypeImpl
-com.google.common.collect.DenseImmutableTable$Row
 com.google.common.collect.CompactHashing
+com.google.common.collect.DenseImmutableTable$Row
 androidx.core.view.WindowInsetsCompat$Impl20
 com.google.common.util.concurrent.ClosingFuture$Peeker
 kotlin.collections.AbstractList$IteratorImpl
@@ -23998,6 +23998,6 @@ kotlin.KotlinVersion:
 io.grpc.ClientInterceptors:
     private static final io.grpc.ClientCall NOOP_CALL
 io.flutter.plugin.common.BinaryMessenger$-CC
-io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
-androidx.lifecycle.DefaultLifecycleObserver$-CC
 io.flutter.plugin.platform.PlatformView$-CC
+androidx.lifecycle.DefaultLifecycleObserver$-CC
+io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
