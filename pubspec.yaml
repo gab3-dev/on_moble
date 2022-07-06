@@ -40,6 +40,7 @@ dependencies:
   firebase_storage: ^10.2.10 #Armazenamento de arquivos
   cloud_firestore: ^3.1.11 #Banco de dados
   image_picker: ^0.8.5 #Selecionar imagens
+  file_picker: ^4.5.1
   custom_pop_up_menu: ^1.2.3+1 #Custom menu
 
 dev_dependencies:

@@ -14,14 +14,14 @@ class Configuration extends StatefulWidget {
 
 class _ConfigurationState extends State<Configuration> {
   final TextEditingController _controllerName = TextEditingController();
-  late File _image;
+  late XFile _image;
   late String _idUserLogged;
   String _urlImageRetrieved = "";
 
   bool _uploadingImage = false;
 
   _retrieveImage(String originImage) async {
-    late File imageSelected;
+    late XFile imageSelected;
     switch (originImage) {
       case "camera":
         imageSelected = (await ImagePicker.platform.getImage(
@@ -30,7 +30,7 @@ class _ConfigurationState extends State<Configuration> {
           maxHeight: null,
           imageQuality: null,
           preferredCameraDevice: CameraDevice.rear,
-        )) as File;
+        )) as XFile;
         break;
       case "galeria":
         imageSelected = (await ImagePicker.platform.getImage(
@@ -39,7 +39,7 @@ class _ConfigurationState extends State<Configuration> {
           maxHeight: null,
           imageQuality: null,
           preferredCameraDevice: CameraDevice.rear,
-        )) as File;
+        )) as XFile;
         break;
     }
     setState(() {
@@ -63,7 +63,9 @@ class _ConfigurationState extends State<Configuration> {
     Reference dirRoot = storage.ref();
     Reference arquivo = dirRoot.child("perfil").child(_idUserLogged + ".jpg");
 
-    UploadTask task = arquivo.putFile(_image);
+    final File imagefile = File(_image.path);
+
+    UploadTask task = arquivo.putFile(imagefile);
 
     _updateUrlImageFirestore(String url) async {
       FirebaseFirestore db = FirebaseFirestore.instance;

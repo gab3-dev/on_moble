@@ -874,6 +874,7 @@ com.google.common.collect.RegularImmutableList:
     boolean isPartialView()
 io.flutter.view.TextureRegistry:
     public abstract io.flutter.view.TextureRegistry$SurfaceTextureEntry registerSurfaceTexture(android.graphics.SurfaceTexture)
+    public void onTrimMemory(int)
 com.google.protobuf.DoubleValue
 com.google.android.gms.auth.api.signin.internal.Storage:
     public com.google.android.gms.auth.api.signin.GoogleSignInOptions getSavedDefaultGoogleSignInOptions()
@@ -1623,6 +1624,7 @@ com.google.android.gms.internal.firebase-auth-api.zzkn:
 kotlinx.coroutines.flow.FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1
 com.google.common.util.concurrent.FuturesGetChecked$GetCheckedTypeValidatorHolder$ClassValueValidator$1
 com.google.common.collect.AbstractTable$Values
+com.mr.flutter.plugin.filepicker.R$drawable
 io.flutter.plugin.editing.FlutterTextUtils:
     public static final int LINE_FEED
     public static final int CARRIAGE_RETURN
@@ -5048,6 +5050,7 @@ com.google.gson.internal.bind.TypeAdapters$31
 com.google.common.collect.MultimapBuilder$MultimapBuilderWithKeys$3
 javax.annotation.meta.TypeQualifierDefault
 com.squareup.okhttp.internal.framed.FramedConnection$3
+com.mr.flutter.plugin.filepicker.R$id
 com.google.protobuf.UInt64Value$Builder
 com.google.common.cache.CacheBuilderSpec$1
 io.grpc.internal.ForwardingConnectionClientTransport:
@@ -5637,6 +5640,7 @@ com.google.common.io.MultiInputStream
 io.grpc.PersistentHashArrayMappedTrie$CollisionLeaf
 kotlinx.coroutines.flow.FlowKt__TransformKt$runningFold$$inlined$unsafeFlow$1
 androidx.annotation.FloatRange
+com.mr.flutter.plugin.filepicker.R$string
 com.google.protobuf.CodedInputStream$ArrayDecoder:
     public int getLastTag()
     public boolean skipField(int,com.google.protobuf.CodedOutputStream)
@@ -5682,6 +5686,7 @@ kotlin.jvm.internal.Ref$FloatRef
 io.flutter.embedding.engine.renderer.FlutterRenderer:
     private void unregisterTexture(long)
     static synthetic void access$600(io.flutter.embedding.engine.renderer.FlutterRenderer,long)
+    void removeOnTrimMemoryListener(io.flutter.view.TextureRegistry$OnTrimMemoryListener)
     public android.graphics.Bitmap getBitmap()
     public void setAccessibilityFeatures(int)
     public void dispatchSemanticsAction(int,int,java.nio.ByteBuffer,int)
@@ -5806,6 +5811,7 @@ okio.InflaterSource
 com.google.android.gms.common.internal.zzak
 com.google.android.gms.auth.api.signin.GoogleSignInOptions$Builder
 com.squareup.okhttp.internal.io.RealConnection
+com.mr.flutter.plugin.filepicker.R$layout
 androidx.customview.widget.ExploreByTouchHelper$2
 com.google.android.gms.common.server.response.FastParser
 kotlin.reflect.KProperty2$Getter
@@ -6332,6 +6338,11 @@ androidx.core.os.HandlerCompat$Api29Impl
 kotlin.Pair:
     public static synthetic kotlin.Pair copy$default(kotlin.Pair,java.lang.Object,java.lang.Object,int,java.lang.Object)
     public final kotlin.Pair copy(java.lang.Object,java.lang.Object)
+com.mr.flutter.plugin.filepicker.FilePickerPlugin:
+    public static void registerWith(io.flutter.plugin.common.PluginRegistry$Registrar)
+    private static final java.lang.String TAG
+    private static final java.lang.String CHANNEL
+    private static final java.lang.String EVENT_CHANNEL
 com.google.common.collect.Synchronized$SynchronizedSetMultimap
 kotlin.reflect.WildcardTypeImpl
 com.google.gson.internal.bind.TypeAdapters$9
@@ -11059,6 +11070,7 @@ kotlinx.coroutines.flow.FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__Zip
 com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory
 io.flutter.view.AccessibilityBridge$SemanticsNode:
     private void log(java.lang.String,boolean)
+com.mr.flutter.plugin.filepicker.R$color
 com.google.android.gms.internal.firebase-auth-api.zzlm:
     static void <clinit>()
     static final synthetic int[] zza
@@ -11120,6 +11132,7 @@ io.flutter.plugins.firebase.firestore.R$color
 androidx.core.app.DialogCompat
 com.google.type.TimeZone
 androidx.core.content.pm.ShortcutManagerCompat$ShortcutMatchFlags
+com.mr.flutter.plugin.filepicker.R
 com.google.protobuf.ByteString:
     public static java.util.Comparator unsignedLexicographicalComparator()
     public static com.google.protobuf.ByteString copyFrom(java.nio.ByteBuffer,int)
@@ -13374,6 +13387,7 @@ kotlinx.coroutines.BuildersKt__Builders_commonKt:
     private static final int UNDECIDED
     private static final int SUSPENDED
     private static final int RESUMED
+com.mr.flutter.plugin.filepicker.R$styleable
 com.google.firebase.firestore.R$attr
 com.google.common.collect.RegularImmutableMultiset$1
 com.google.common.graph.PredecessorsFunction
@@ -13403,6 +13417,7 @@ com.google.common.collect.StandardTable$ColumnMap$ColumnMapEntrySet$1
 kotlinx.coroutines.DefaultExecutorKt
 com.google.apphosting.datastore.testing.DatastoreTestTrace$FirestoreV1Action$DeleteDocumentOrBuilder
 io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry:
+    private void removeListener()
     public void release()
 kotlinx.coroutines.channels.BroadcastKt$broadcast$1
 kotlin.reflect.KMutableProperty0$Setter
@@ -13962,6 +13977,7 @@ com.google.firebase.components.Component:
     private static synthetic java.lang.Object lambda$of$0(java.lang.Object,com.google.firebase.components.ComponentContainer)
     public boolean isLazy()
 com.google.android.gms.common.zaa
+com.mr.flutter.plugin.filepicker.R$dimen
 io.grpc.InternalChannelz$ChannelStats$Builder
 kotlinx.coroutines.flow.FlowKt__CountKt$count$1
 com.google.android.gms.internal.firebase-auth-api.zzgj:
@@ -14347,6 +14363,7 @@ com.google.android.gms.internal.firebase-auth-api.zzwh:
 com.google.common.base.Splitter$2
 com.google.android.gms.common.internal.zag:
     public static com.google.android.gms.common.internal.zag zac(androidx.fragment.app.Fragment,android.content.Intent,int)
+com.mr.flutter.plugin.filepicker.R$style
 com.google.android.gms.internal.firebase-auth-api.zzkv:
     static void <clinit>()
     static final synthetic int[] zza
@@ -16099,6 +16116,7 @@ androidx.activity.ComponentActivity:
 com.google.common.primitives.ImmutableDoubleArray$AsList
 kotlin.UShortKt
 com.google.errorprone.annotations.InlineMeValidationDisabled
+com.mr.flutter.plugin.filepicker.R$integer
 com.google.rpc.context.AttributeContextProto
 com.google.common.collect.ImmutableEnumMap
 com.google.common.primitives.Doubles$LexicographicalComparator
@@ -16235,9 +16253,9 @@ com.google.android.gms.base.R
 com.google.android.gms.safetynet.SafetyNetApi$zzc
 com.google.protobuf.BinaryWriter$SafeDirectWriter
 androidx.customview.widget.ExploreByTouchHelper
-io.flutter.embedding.engine.systemchannels.PlatformChannel:
-    private static final java.lang.String TAG
 io.flutter.embedding.engine.systemchannels.PlatformViewsChannel:
+    private static final java.lang.String TAG
+io.flutter.embedding.engine.systemchannels.PlatformChannel:
     private static final java.lang.String TAG
 kotlinx.coroutines.flow.FlowKt__ReduceKt$single$$inlined$collect$1
 io.grpc.internal.InternalHandlerRegistry$Builder
@@ -16873,6 +16891,7 @@ com.squareup.okhttp.RequestBody:
     public abstract void writeTo(okio.BufferedSink)
 io.grpc.inprocess.InternalInProcess
 androidx.browser.R$color
+com.mr.flutter.plugin.filepicker.BuildConfig
 kotlin.ExtensionFunctionType
 androidx.core.view.LayoutInflaterFactory
 com.google.common.graph.Traverser$Traversal$1
@@ -17671,6 +17690,8 @@ io.grpc.ForwardingClientCall:
     public synthetic bridge io.grpc.Attributes getAttributes()
     public synthetic bridge boolean isReady()
     public synthetic bridge void setMessageCompression(boolean)
+com.mr.flutter.plugin.filepicker.FilePickerDelegate:
+    private static final java.lang.String TAG
 com.google.firebase.auth.zzad
 androidx.core.location.GnssStatusWrapper
 com.google.common.cache.RemovalNotification
@@ -18515,6 +18536,10 @@ io.grpc.internal.ConnectionClientTransport:
 com.google.common.collect.Synchronized$SynchronizedAsMapEntries$1$1
 androidx.activity.R$styleable
 com.google.android.gms.internal.safetynet.zzr
+com.mr.flutter.plugin.filepicker.FileUtils:
+    public void <init>()
+    private static final java.lang.String TAG
+    private static final java.lang.String PRIMARY_VOLUME_NAME
 io.grpc.InternalCallOptions
 io.flutter.plugins.firebase.storage.R$attr
 kotlin.LazyKt__LazyJVMKt$WhenMappings
@@ -19419,6 +19444,7 @@ kotlinx.coroutines.flow.FlowKt__TransformKt$map$$inlined$unsafeTransform$1$2
 com.google.common.cache.LocalCache$WeakWriteEntry
 io.flutter.plugins.firebase.storage.R$styleable
 kotlin.collections.AbstractList
+com.mr.flutter.plugin.filepicker.R$attr
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$zip$2
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$filterNotNullTo$3
 com.google.common.collect.TreeRangeSet$1
@@ -21946,7 +21972,6 @@ com.google.android.gms.common.api.Api$BaseClientBuilder:
     public static final int API_PRIORITY_PLUS
     public static final int API_PRIORITY_OTHER
 io.flutter.embedding.android.FlutterActivityAndFragmentDelegate:
-    void onLowMemory()
     private static final java.lang.String TAG
     private static final java.lang.String FRAMEWORK_RESTORATION_BUNDLE_KEY
     private static final java.lang.String PLUGINS_RESTORATION_BUNDLE_KEY
@@ -23315,6 +23340,8 @@ flutter.plugins.contactsservice.contactsservice.ContactsServicePlugin$GetContact
     final synthetic flutter.plugins.contactsservice.contactsservice.ContactsServicePlugin$GetContactsTask this$1
 com.google.firebase.storage.network.ResumableUploadCancelRequest:
     public static boolean cancelCalled
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$LifeCycleObserver:
+    final synthetic com.mr.flutter.plugin.filepicker.FilePickerPlugin this$0
 com.google.protobuf.OneofInfo
 com.google.android.gms.common.logging.Logger:
     private final com.google.android.gms.common.internal.GmsLogger zzc
@@ -23997,7 +24024,7 @@ kotlin.KotlinVersion:
     public static final kotlin.KotlinVersion$Companion Companion
 io.grpc.ClientInterceptors:
     private static final io.grpc.ClientCall NOOP_CALL
-io.flutter.plugin.common.BinaryMessenger$-CC
 io.flutter.plugin.platform.PlatformView$-CC
-androidx.lifecycle.DefaultLifecycleObserver$-CC
 io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
+androidx.lifecycle.DefaultLifecycleObserver$-CC
+io.flutter.plugin.common.BinaryMessenger$-CC

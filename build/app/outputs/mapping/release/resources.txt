@@ -40,6 +40,7 @@ Referenced Strings:
   /createAuthUri
   /deleteAccount
   /emailLinkSignin
+  /file_picker/
   /getAccountInfo
   /getOobConfirmationCode
   /index.html
@@ -564,6 +565,9 @@ Referenced Strings:
   FieldValue.increment
   FieldValue.serverTimestamp
   FileDownloadTask
+  FilePicker
+  FilePickerDelegate
+  FilePickerUtils
   FileSource
   FirebaseApp
   FirebaseAuth
@@ -1691,7 +1695,9 @@ Referenced Strings:
   allScroll
   allow
   allowFreeFormInput
+  allowMultipleSelection
   allowedDataTypes
+  allowedExtensions
   already_active
   alt
   alwaysUse24HourFormat
@@ -1710,12 +1716,15 @@ Referenced Strings:
   android.intent.action.EDIT
   android.intent.action.GET_CONTENT
   android.intent.action.INSERT
+  android.intent.action.OPEN_DOCUMENT_TREE
   android.intent.action.PACKAGE_ADDED
   android.intent.action.PICK
   android.intent.action.RUN
   android.intent.action.USER_UNLOCKED
   android.intent.action.VIEW
+  android.intent.category.OPENABLE
   android.intent.extra.ALLOW_MULTIPLE
+  android.intent.extra.MIME_TYPES
   android.intent.extra.USE_FRONT_CAMERA
   android.intent.extra.durationLimit
   android.intent.extras.CAMERA_FACING
@@ -1728,8 +1737,10 @@ Referenced Strings:
   android.os.Build
   android.os.Build$VERSION
   android.os.SystemProperties
+  android.os.storage.StorageVolume
   android.people
   android.permission.CAMERA
+  android.permission.READ_EXTERNAL_STORAGE
   android.settings.APPLICATION_DETAILS_...
   android.summaryText
   android.support.FILE_PROVIDER_PATHS
@@ -1795,6 +1806,7 @@ Referenced Strings:
   anim
   announce
   anonymous
+  any
   api
   apiKey
   api_force_staging
@@ -1823,6 +1835,7 @@ Referenced Strings:
   attributes
   attrs
   aud
+  audio
   auth
   authCredential
   authTimestamp
@@ -1925,6 +1938,7 @@ Referenced Strings:
   claims
   class
   classes_to_restore
+  clear
   clearFocus
   cleartextTrafficPermitted
   click
@@ -1947,6 +1961,7 @@ Referenced Strings:
   com.android.contacts
   com.android.org.conscrypt.OpenSSLProv...
   com.android.org.conscrypt.OpenSSLSock...
+  com.android.providers.downloads.docum...
   com.android.vending
   com.google
   com.google.android.clockwork.home.UPD...
@@ -2201,6 +2216,7 @@ Referenced Strings:
   deviceId
   deviceState
   dimen
+  dir
   direct
   direction
   direction_
@@ -2230,6 +2246,7 @@ Referenced Strings:
   doubleValue
   downloadTokens
   downloadURL
+  downloads
   drainedSubstreams
   drop
   dynamicLinkDomain
@@ -2426,6 +2443,7 @@ Referenced Strings:
   getContactsForPhone
   getDeferredComponentInstallState
   getDescriptor
+  getDirectory
   getDisplayFeatures
   getDisplayInfo
   getDouble
@@ -2441,6 +2459,7 @@ Referenced Strings:
   getNpnSelectedProtocol
   getObject
   getParentNodeId
+  getPath
   getPoolSize
   getPosture
   getProjectConfig
@@ -2454,6 +2473,8 @@ Referenced Strings:
   getType
   getUncaughtExceptionPreHandler
   getUri
+  getUuid
+  getVolumeList
   getWindowLayoutInfo
   github.com
   github.com/clovisnicolas/flutter_cont...
@@ -2557,6 +2578,7 @@ Referenced Strings:
   interceptor
   internal
   interrupted
+  invalid_format_type
   invisible_actions
   invokeSuspend
   io.flutter.Entrypoint
@@ -2593,6 +2615,7 @@ Referenced Strings:
   isEmailVerified
   isFromCache
   isNewUser
+  isPrimary
   isSupportedSocket
   isTransparentRetry
   is_anonymous
@@ -2819,6 +2842,8 @@ Referenced Strings:
   mfaProvider
   middleInitial
   middleName
+  miguelruivo.flutter.plugins.filepicker
+  miguelruivo.flutter.plugins.filepicke...
   mimetype
   min
   minimumVersion
@@ -3047,6 +3072,7 @@ Referenced Strings:
   prefixes
   previousAttempts
   previousEmail
+  primary
   primaryActivity
   primaryActivityName
   primaryActivityName.className
@@ -3097,6 +3123,7 @@ Referenced Strings:
   r
   r6
   range
+  raw:
   rawConfigValue
   rawNonce
   rawPassword
@@ -3105,6 +3132,7 @@ Referenced Strings:
   read
   readTime
   readTime_
+  read_external_storage_denied
   read_time_nanos
   read_time_seconds
   realCall
@@ -3226,6 +3254,7 @@ Referenced Strings:
   selectProtocol
   select_
   selected
+  selectedItems
   selectionBase
   selectionExtent
   semanticAction
@@ -3327,6 +3356,7 @@ Referenced Strings:
   stopListening
   stopwatch
   stopwatchSupplier
+  storage
   storageBucket
   stream
   streamId_
@@ -3472,6 +3502,8 @@ Referenced Strings:
   uniqueIdentifier
   units
   unknown
+  unknown_activity
+  unknown_path
   unlinkEmailCredential
   unlinkFederatedCredential
   unobfuscatedPhoneInfo
@@ -3555,6 +3587,7 @@ Referenced Strings:
   windowMetrics.bounds
   windowMetricsCalculator
   windowToken
+  withData
   withThumbnails
   wn
   work
@@ -3583,6 +3616,7 @@ Marking id:top:2131034215 used because its prefix matches string pool constant t
 Marking styleable:SplitPlaceholderRule:-1 used because its prefix matches string pool constant SplitPlaceholderRule
 Marking id:start:2131034197 used because its prefix matches string pool constant start
 Marking attr:shortcutMatchRequired:2130772006 used because its prefix matches string pool constant short
+Marking attr:primaryActivityName:2130772001 used because its prefix matches string pool constant primary
 Marking string:gcm_defaultSenderId:2131296275 used because its prefix matches string pool constant gcm_defaultSenderId
 Marking attr:secondaryActivityName:2130772005 used because its prefix matches string pool constant secondaryActivityName
 Marking id:info:2131034179 used because its prefix matches string pool constant info
@@ -3681,6 +3715,7 @@ Marking id:accessibility_custom_action_8:2131034143 used because its prefix matc
 Marking id:accessibility_custom_action_9:2131034144 used because its prefix matches string pool constant accessibility
 Marking id:time:2131034213 used because its prefix matches string pool constant time
 Marking id:light:2131034182 used because its prefix matches string pool constant light
+Marking attr:clearTop:2130771974 used because its prefix matches string pool constant clear
 Marking id:action_container:2131034145 used because its prefix matches string pool constant action
 Marking id:action_divider:2131034146 used because its prefix matches string pool constant action
 Marking id:action_image:2131034147 used because its prefix matches string pool constant action
@@ -3801,6 +3836,7 @@ style:Widget_Compat_NotificationActionText:2131361800 => [color:androidx_core_se
 The root reachable resources are:
 attr:activityAction:2130771968,
    attr:activityName:2130771969,
+   attr:clearTop:2130771974,
    attr:imageAspectRatio:2130771990,
    attr:imageAspectRatioAdjust:2130771991,
    attr:keylines:2130771992,

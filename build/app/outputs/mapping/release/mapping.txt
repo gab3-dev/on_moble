@@ -1,11 +1,11 @@
 # compiler: R8
 # compiler_version: 2.1.62
 # min_api: 19
-# pg_map_id: a76a262
+# pg_map_id: 35b6691
 # common_typos_disable
 $$ServiceLoaderMethods -> a:
-    java.util.Iterator $load$17463() -> a
-    java.util.Iterator $load$18080() -> b
+    java.util.Iterator $load$17537() -> a
+    java.util.Iterator $load$18154() -> b
 $r8$backportedMethods$utility$Boolean$1$hashCode -> b:
     int hashCode(boolean) -> a
 $r8$backportedMethods$utility$Long$1$hashCode -> c:
@@ -18185,6 +18185,128 @@ com.google.type.LatLng$1 -> e.a.h.a$a:
 com.google.type.LatLng$Builder -> e.a.h.a$b:
     com.google.type.LatLng$Builder setLatitude(double) -> B
     com.google.type.LatLng$Builder setLongitude(double) -> C
+com.mr.flutter.plugin.filepicker.FileInfo -> com.mr.flutter.plugin.filepicker.a:
+    java.lang.String path -> a
+    long size -> d
+    java.lang.String name -> b
+    android.net.Uri uri -> c
+    byte[] bytes -> e
+    java.util.HashMap toMap() -> a
+com.mr.flutter.plugin.filepicker.FileInfo$Builder -> com.mr.flutter.plugin.filepicker.a$a:
+    java.lang.String path -> a
+    long size -> d
+    java.lang.String name -> b
+    android.net.Uri uri -> c
+    byte[] bytes -> e
+    com.mr.flutter.plugin.filepicker.FileInfo build() -> a
+    com.mr.flutter.plugin.filepicker.FileInfo$Builder withData(byte[]) -> b
+    com.mr.flutter.plugin.filepicker.FileInfo$Builder withName(java.lang.String) -> c
+    com.mr.flutter.plugin.filepicker.FileInfo$Builder withPath(java.lang.String) -> d
+    com.mr.flutter.plugin.filepicker.FileInfo$Builder withSize(long) -> e
+    com.mr.flutter.plugin.filepicker.FileInfo$Builder withUri(android.net.Uri) -> f
+com.mr.flutter.plugin.filepicker.FilePickerDelegate -> com.mr.flutter.plugin.filepicker.b:
+    java.lang.String type -> f
+    com.mr.flutter.plugin.filepicker.FilePickerDelegate$PermissionManager permissionManager -> b
+    int REQUEST_CODE -> i
+    boolean loadDataToMemory -> e
+    java.lang.String[] allowedExtensions -> g
+    io.flutter.plugin.common.EventChannel$EventSink eventSink -> h
+    android.app.Activity activity -> a
+    io.flutter.plugin.common.MethodChannel$Result pendingResult -> c
+    boolean isMultipleSelection -> d
+    boolean onActivityResult(int,int,android.content.Intent) -> a
+    android.app.Activity access$000(com.mr.flutter.plugin.filepicker.FilePickerDelegate) -> b
+    boolean access$100(com.mr.flutter.plugin.filepicker.FilePickerDelegate) -> c
+    void access$200(com.mr.flutter.plugin.filepicker.FilePickerDelegate,java.lang.Object) -> d
+    java.lang.String access$300(com.mr.flutter.plugin.filepicker.FilePickerDelegate) -> e
+    void access$400(com.mr.flutter.plugin.filepicker.FilePickerDelegate,java.lang.String,java.lang.String) -> f
+    io.flutter.plugin.common.EventChannel$EventSink access$500(com.mr.flutter.plugin.filepicker.FilePickerDelegate) -> g
+    void clearPendingResult() -> h
+    void dispatchEventStatus(boolean) -> i
+    void finishWithAlreadyActiveError(io.flutter.plugin.common.MethodChannel$Result) -> j
+    void finishWithError(java.lang.String,java.lang.String) -> k
+    void finishWithSuccess(java.lang.Object) -> l
+    void setEventHandler(io.flutter.plugin.common.EventChannel$EventSink) -> m
+    boolean setPendingMethodCallAndResult(io.flutter.plugin.common.MethodChannel$Result) -> n
+    void startFileExplorer() -> o
+    void startFileExplorer(java.lang.String,boolean,boolean,java.lang.String[],io.flutter.plugin.common.MethodChannel$Result) -> p
+com.mr.flutter.plugin.filepicker.FilePickerDelegate$1 -> com.mr.flutter.plugin.filepicker.b$a:
+    android.app.Activity val$activity -> a
+    boolean isPermissionGranted(java.lang.String) -> a
+    void askForPermission(java.lang.String,int) -> b
+com.mr.flutter.plugin.filepicker.FilePickerDelegate$2 -> com.mr.flutter.plugin.filepicker.b$b:
+    android.content.Intent val$data -> e
+    com.mr.flutter.plugin.filepicker.FilePickerDelegate this$0 -> f
+com.mr.flutter.plugin.filepicker.FilePickerDelegate$3 -> com.mr.flutter.plugin.filepicker.b$c:
+    boolean val$status -> a
+    com.mr.flutter.plugin.filepicker.FilePickerDelegate this$0 -> b
+com.mr.flutter.plugin.filepicker.FilePickerDelegate$PermissionManager -> com.mr.flutter.plugin.filepicker.b$d:
+    boolean isPermissionGranted(java.lang.String) -> a
+    void askForPermission(java.lang.String,int) -> b
+com.mr.flutter.plugin.filepicker.FilePickerPlugin -> com.mr.flutter.plugin.filepicker.FilePickerPlugin:
+    android.app.Application application -> c
+    com.mr.flutter.plugin.filepicker.FilePickerPlugin$LifeCycleObserver observer -> f
+    java.lang.String fileType -> i
+    android.app.Activity activity -> g
+    io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding pluginBinding -> d
+    boolean isMultipleSelection -> j
+    io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding activityBinding -> a
+    boolean withData -> k
+    io.flutter.plugin.common.MethodChannel channel -> h
+    androidx.lifecycle.Lifecycle lifecycle -> e
+    com.mr.flutter.plugin.filepicker.FilePickerDelegate delegate -> b
+    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> a
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> b
+    void onDetachedFromActivity() -> c
+    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> d
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
+    void onDetachedFromActivityForConfigChanges() -> f
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> g
+    com.mr.flutter.plugin.filepicker.FilePickerDelegate access$100(com.mr.flutter.plugin.filepicker.FilePickerPlugin) -> h
+    java.lang.String resolveType(java.lang.String) -> i
+    void setup(io.flutter.plugin.common.BinaryMessenger,android.app.Application,android.app.Activity,io.flutter.plugin.common.PluginRegistry$Registrar,io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> j
+    void tearDown() -> k
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$1 -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$a:
+    com.mr.flutter.plugin.filepicker.FilePickerPlugin this$0 -> a
+    void onCancel(java.lang.Object) -> a
+    void onListen(java.lang.Object,io.flutter.plugin.common.EventChannel$EventSink) -> c
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$LifeCycleObserver -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$LifeCycleObserver:
+    android.app.Activity thisActivity -> e
+    void onResume(androidx.lifecycle.LifecycleOwner) -> a
+    void onDestroy(androidx.lifecycle.LifecycleOwner) -> b
+    void onCreate(androidx.lifecycle.LifecycleOwner) -> d
+    void onPause(androidx.lifecycle.LifecycleOwner) -> f
+    void onStop(androidx.lifecycle.LifecycleOwner) -> g
+    void onStart(androidx.lifecycle.LifecycleOwner) -> h
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$b:
+    io.flutter.plugin.common.MethodChannel$Result methodResult -> a
+    android.os.Handler handler -> b
+    void error(java.lang.String,java.lang.String,java.lang.Object) -> a
+    void success(java.lang.Object) -> b
+    void notImplemented() -> c
+    io.flutter.plugin.common.MethodChannel$Result access$000(com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper) -> d
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper$1 -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$b$a:
+    java.lang.Object val$result -> e
+    com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper this$0 -> f
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper$2 -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$b$b:
+    java.lang.String val$errorMessage -> f
+    java.lang.Object val$errorDetails -> g
+    com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper this$0 -> h
+    java.lang.String val$errorCode -> e
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper$3 -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$b$c:
+    com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper this$0 -> e
+com.mr.flutter.plugin.filepicker.FileUtils -> com.mr.flutter.plugin.filepicker.c:
+    boolean clearCache(android.content.Context) -> a
+    java.lang.String getDirectoryPath(java.lang.Class,java.lang.Object) -> b
+    java.lang.String getDocumentPathFromTreeUri(android.net.Uri) -> c
+    java.lang.String getFileName(android.net.Uri,android.content.Context) -> d
+    java.lang.String getFullPathFromTreeUri(android.net.Uri,android.content.Context) -> e
+    java.lang.String[] getMimeTypes(java.util.ArrayList) -> f
+    java.lang.String getVolumeIdFromTreeUri(android.net.Uri) -> g
+    java.lang.String getVolumePath(java.lang.String,android.content.Context) -> h
+    boolean isDownloadsDocument(android.net.Uri) -> i
+    void loadData(java.io.File,com.mr.flutter.plugin.filepicker.FileInfo$Builder) -> j
+    com.mr.flutter.plugin.filepicker.FileInfo openFileStream(android.content.Context,android.net.Uri,boolean) -> k
 com.squareup.okhttp.Credentials -> e.b.a.a:
     java.lang.String basic(java.lang.String,java.lang.String) -> a
 com.squareup.okhttp.Headers -> e.b.a.b:
@@ -19186,8 +19308,9 @@ io.flutter.embedding.engine.renderer.FlutterRenderer -> io.flutter.embedding.eng
     io.flutter.embedding.engine.FlutterJNI flutterJNI -> a
     android.os.Handler handler -> e
     java.util.concurrent.atomic.AtomicLong nextTextureId -> b
+    io.flutter.embedding.engine.renderer.FlutterUiDisplayListener flutterUiDisplayListener -> g
     android.view.Surface surface -> c
-    io.flutter.embedding.engine.renderer.FlutterUiDisplayListener flutterUiDisplayListener -> f
+    java.util.Set onTrimMemoryListeners -> f
     boolean isDisplayingFlutterUi -> d
     io.flutter.view.TextureRegistry$SurfaceTextureEntry createSurfaceTexture() -> a
     boolean access$002(io.flutter.embedding.engine.renderer.FlutterRenderer,boolean) -> b
@@ -19195,19 +19318,22 @@ io.flutter.embedding.engine.renderer.FlutterRenderer -> io.flutter.embedding.eng
     void access$500(io.flutter.embedding.engine.renderer.FlutterRenderer,long) -> d
     android.os.Handler access$700(io.flutter.embedding.engine.renderer.FlutterRenderer) -> e
     void addIsDisplayingFlutterUiListener(io.flutter.embedding.engine.renderer.FlutterUiDisplayListener) -> f
-    void dispatchPointerDataPacket(java.nio.ByteBuffer,int) -> g
-    boolean isDisplayingFlutterUi() -> h
-    boolean isSoftwareRenderingEnabled() -> i
-    void markTextureFrameAvailable(long) -> j
-    io.flutter.view.TextureRegistry$SurfaceTextureEntry registerSurfaceTexture(android.graphics.SurfaceTexture) -> k
-    void registerTexture(long,io.flutter.embedding.engine.renderer.SurfaceTextureWrapper) -> l
-    void removeIsDisplayingFlutterUiListener(io.flutter.embedding.engine.renderer.FlutterUiDisplayListener) -> m
-    void setSemanticsEnabled(boolean) -> n
-    void setViewportMetrics(io.flutter.embedding.engine.renderer.FlutterRenderer$ViewportMetrics) -> o
-    void startRenderingToSurface(android.view.Surface,boolean) -> p
-    void stopRenderingToSurface() -> q
-    void surfaceChanged(int,int) -> r
-    void swapSurface(android.view.Surface) -> s
+    void addOnTrimMemoryListener(io.flutter.view.TextureRegistry$OnTrimMemoryListener) -> g
+    void clearDeadListeners() -> h
+    void dispatchPointerDataPacket(java.nio.ByteBuffer,int) -> i
+    boolean isDisplayingFlutterUi() -> j
+    boolean isSoftwareRenderingEnabled() -> k
+    void markTextureFrameAvailable(long) -> l
+    void onTrimMemory(int) -> m
+    io.flutter.view.TextureRegistry$SurfaceTextureEntry registerSurfaceTexture(android.graphics.SurfaceTexture) -> n
+    void registerTexture(long,io.flutter.embedding.engine.renderer.SurfaceTextureWrapper) -> o
+    void removeIsDisplayingFlutterUiListener(io.flutter.embedding.engine.renderer.FlutterUiDisplayListener) -> p
+    void setSemanticsEnabled(boolean) -> q
+    void setViewportMetrics(io.flutter.embedding.engine.renderer.FlutterRenderer$ViewportMetrics) -> r
+    void startRenderingToSurface(android.view.Surface,boolean) -> s
+    void stopRenderingToSurface() -> t
+    void surfaceChanged(int,int) -> u
+    void swapSurface(android.view.Surface) -> v
 io.flutter.embedding.engine.renderer.FlutterRenderer$1 -> io.flutter.embedding.engine.renderer.a$a:
     io.flutter.embedding.engine.renderer.FlutterRenderer this$0 -> a
     void onFlutterUiNoLongerDisplayed() -> c
@@ -19233,20 +19359,22 @@ io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureFinalizerRunn
     long id -> e
     io.flutter.embedding.engine.FlutterJNI flutterJNI -> f
 io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry -> io.flutter.embedding.engine.renderer.a$f:
-    java.lang.Runnable onFrameConsumed -> e
-    io.flutter.embedding.engine.renderer.FlutterRenderer this$0 -> g
-    io.flutter.view.TextureRegistry$OnFrameConsumedListener listener -> d
+    io.flutter.view.TextureRegistry$OnFrameConsumedListener frameConsumedListener -> e
     io.flutter.embedding.engine.renderer.SurfaceTextureWrapper textureWrapper -> b
+    java.lang.Runnable onFrameConsumed -> f
     long id -> a
+    io.flutter.view.TextureRegistry$OnTrimMemoryListener trimMemoryListener -> d
     boolean released -> c
-    android.graphics.SurfaceTexture$OnFrameAvailableListener onFrameListener -> f
+    android.graphics.SurfaceTexture$OnFrameAvailableListener onFrameListener -> g
+    io.flutter.embedding.engine.renderer.FlutterRenderer this$0 -> h
     long id() -> a
-    void setOnFrameConsumedListener(io.flutter.view.TextureRegistry$OnFrameConsumedListener) -> b
-    android.graphics.SurfaceTexture surfaceTexture() -> c
-    io.flutter.view.TextureRegistry$OnFrameConsumedListener access$100(io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry) -> d
-    boolean access$200(io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry) -> e
-    long access$400(io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry) -> f
-    io.flutter.embedding.engine.renderer.SurfaceTextureWrapper textureWrapper() -> g
+    void setOnTrimMemoryListener(io.flutter.view.TextureRegistry$OnTrimMemoryListener) -> b
+    void setOnFrameConsumedListener(io.flutter.view.TextureRegistry$OnFrameConsumedListener) -> c
+    android.graphics.SurfaceTexture surfaceTexture() -> d
+    io.flutter.view.TextureRegistry$OnFrameConsumedListener access$100(io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry) -> e
+    boolean access$200(io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry) -> f
+    long access$400(io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry) -> g
+    io.flutter.embedding.engine.renderer.SurfaceTextureWrapper textureWrapper() -> h
 io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry$1 -> io.flutter.embedding.engine.renderer.a$f$a:
     io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry this$1 -> e
 io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry$2 -> io.flutter.embedding.engine.renderer.a$f$b:
@@ -20098,35 +20226,41 @@ io.flutter.plugin.platform.PlatformViewRegistryImpl -> g.a.c.d.i:
     java.util.Map viewFactories -> a
     io.flutter.plugin.platform.PlatformViewFactory getFactory(java.lang.String) -> a
 io.flutter.plugin.platform.PlatformViewWrapper -> g.a.c.d.j:
-    android.view.Surface surface -> l
-    io.flutter.view.TextureRegistry$OnFrameConsumedListener listener -> p
-    io.flutter.embedding.android.AndroidTouchProcessor touchProcessor -> m
+    io.flutter.view.TextureRegistry$OnFrameConsumedListener frameConsumedListener -> p
     int bufferHeight -> j
-    android.graphics.SurfaceTexture tx -> k
     int top -> h
     java.util.concurrent.atomic.AtomicLong pendingFramesCount -> o
     int bufferWidth -> i
     int prevTop -> f
     android.view.ViewTreeObserver$OnGlobalFocusChangeListener activeFocusListener -> n
     int left -> g
+    io.flutter.view.TextureRegistry$OnTrimMemoryListener trimMemoryListener -> r
     int prevLeft -> e
+    boolean shouldRecreateSurfaceForLowMemory -> q
+    android.view.Surface surface -> l
+    io.flutter.embedding.android.AndroidTouchProcessor touchProcessor -> m
+    android.graphics.SurfaceTexture tx -> k
     java.util.concurrent.atomic.AtomicLong access$000(io.flutter.plugin.platform.PlatformViewWrapper) -> a
-    android.view.Surface createSurface(android.graphics.SurfaceTexture) -> b
-    int getBufferHeight() -> c
-    int getBufferWidth() -> d
-    void onFrameProduced() -> e
-    void release() -> f
-    void setBufferSize(int,int) -> g
-    void setLayoutParams(android.widget.FrameLayout$LayoutParams) -> h
-    void setOnDescendantFocusChangeListener(android.view.View$OnFocusChangeListener) -> i
-    void setTexture(android.graphics.SurfaceTexture) -> j
-    void setTouchProcessor(io.flutter.embedding.android.AndroidTouchProcessor) -> k
-    boolean shouldDrawToSurfaceNow() -> l
-    void unsetOnDescendantFocusChangeListener() -> m
+    boolean access$102(io.flutter.plugin.platform.PlatformViewWrapper,boolean) -> b
+    android.view.Surface createSurface(android.graphics.SurfaceTexture) -> c
+    int getBufferHeight() -> d
+    int getBufferWidth() -> e
+    void onFrameProduced() -> f
+    void recreateSurfaceIfNeeded() -> g
+    void release() -> h
+    void setBufferSize(int,int) -> i
+    void setLayoutParams(android.widget.FrameLayout$LayoutParams) -> j
+    void setOnDescendantFocusChangeListener(android.view.View$OnFocusChangeListener) -> k
+    void setTexture(android.graphics.SurfaceTexture) -> l
+    void setTouchProcessor(io.flutter.embedding.android.AndroidTouchProcessor) -> m
+    boolean shouldDrawToSurfaceNow() -> n
+    void unsetOnDescendantFocusChangeListener() -> o
 io.flutter.plugin.platform.PlatformViewWrapper$1 -> g.a.c.d.j$a:
     io.flutter.plugin.platform.PlatformViewWrapper this$0 -> a
     void onFrameConsumed() -> a
 io.flutter.plugin.platform.PlatformViewWrapper$2 -> g.a.c.d.j$b:
+    io.flutter.plugin.platform.PlatformViewWrapper this$0 -> a
+io.flutter.plugin.platform.PlatformViewWrapper$3 -> g.a.c.d.j$c:
     io.flutter.plugin.platform.PlatformViewWrapper this$0 -> b
     android.view.View$OnFocusChangeListener val$userFocusListener -> a
 io.flutter.plugin.platform.PlatformViewsAccessibilityDelegate -> g.a.c.d.k:
@@ -21047,9 +21181,9 @@ io.flutter.plugins.imagepicker.ImagePickerDelegate -> io.flutter.plugins.imagepi
     void launchPickImageFromGalleryIntent() -> z
 io.flutter.plugins.imagepicker.ImagePickerDelegate$1 -> io.flutter.plugins.imagepicker.e$a:
     android.app.Activity val$activity -> a
-    boolean needRequestCameraPermission() -> a
-    boolean isPermissionGranted(java.lang.String) -> b
-    void askForPermission(java.lang.String,int) -> c
+    boolean isPermissionGranted(java.lang.String) -> a
+    void askForPermission(java.lang.String,int) -> b
+    boolean needRequestCameraPermission() -> c
 io.flutter.plugins.imagepicker.ImagePickerDelegate$2 -> io.flutter.plugins.imagepicker.e$b:
     android.app.Activity val$activity -> a
     android.net.Uri resolveFileProviderUriForFile(java.lang.String,java.io.File) -> a
@@ -21068,9 +21202,9 @@ io.flutter.plugins.imagepicker.ImagePickerDelegate$FileUriResolver -> io.flutter
 io.flutter.plugins.imagepicker.ImagePickerDelegate$OnPathReadyListener -> io.flutter.plugins.imagepicker.e$f:
     void onPathReady(java.lang.String) -> a
 io.flutter.plugins.imagepicker.ImagePickerDelegate$PermissionManager -> io.flutter.plugins.imagepicker.e$g:
-    boolean needRequestCameraPermission() -> a
-    boolean isPermissionGranted(java.lang.String) -> b
-    void askForPermission(java.lang.String,int) -> c
+    boolean isPermissionGranted(java.lang.String) -> a
+    void askForPermission(java.lang.String,int) -> b
+    boolean needRequestCameraPermission() -> c
 io.flutter.plugins.imagepicker.ImagePickerPlugin -> io.flutter.plugins.imagepicker.ImagePickerPlugin:
     io.flutter.plugins.imagepicker.ImagePickerPlugin$ActivityState activityState -> b
     io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding pluginBinding -> a
@@ -21496,10 +21630,12 @@ io.flutter.view.TextureRegistry -> io.flutter.view.d:
     io.flutter.view.TextureRegistry$SurfaceTextureEntry createSurfaceTexture() -> a
 io.flutter.view.TextureRegistry$OnFrameConsumedListener -> io.flutter.view.d$a:
     void onFrameConsumed() -> a
-io.flutter.view.TextureRegistry$SurfaceTextureEntry -> io.flutter.view.d$b:
+io.flutter.view.TextureRegistry$OnTrimMemoryListener -> io.flutter.view.d$b:
+io.flutter.view.TextureRegistry$SurfaceTextureEntry -> io.flutter.view.d$c:
     long id() -> a
-    void setOnFrameConsumedListener(io.flutter.view.TextureRegistry$OnFrameConsumedListener) -> b
-    android.graphics.SurfaceTexture surfaceTexture() -> c
+    void setOnTrimMemoryListener(io.flutter.view.TextureRegistry$OnTrimMemoryListener) -> b
+    void setOnFrameConsumedListener(io.flutter.view.TextureRegistry$OnFrameConsumedListener) -> c
+    android.graphics.SurfaceTexture surfaceTexture() -> d
 io.flutter.view.VsyncWaiter -> io.flutter.view.e:
     io.flutter.view.VsyncWaiter$DisplayListener listener -> e
     io.flutter.embedding.engine.FlutterJNI flutterJNI -> b
