@@ -67,10 +67,13 @@ class _ConfigurationState extends State<Configuration> {
 
     UploadTask task = arquivo.putFile(imagefile);
 
-    _updateUrlImageFirestore(String url) async {
+    _updateUrlImageFirestore(String urlImg) async {
       FirebaseFirestore db = FirebaseFirestore.instance;
-      DocumentReference ref = db.collection("users").doc(_idUserLogged);
-      await ref.update({'urlImage': url});
+
+      Map<String, dynamic> _updateData = {'urlImg': urlImg};
+
+      DocumentReference ref = db.collection('users').doc(_idUserLogged);
+      await ref.update(_updateData);
     }
 
     Future _retrieveUrlImage(TaskSnapshot taskSnapshot) async {
@@ -127,16 +130,16 @@ class _ConfigurationState extends State<Configuration> {
         child: Center(
           child: SingleChildScrollView(
               child: Column(
-            children: [
+            children: <Widget>[
               Container(
-                padding: const EdgeInsets.all(8),
-                child: _uploadingImage
-                    ? const CircularProgressIndicator()
-                    : Container(),
-              ),
+                  padding: const EdgeInsets.all(16),
+                  child: _uploadingImage
+                      ? const CircularProgressIndicator()
+                      : Container()),
               CircleAvatar(
                 radius: 100,
                 backgroundColor: Theme.of(context).primaryColorLight,
+                // ignore: unnecessary_null_comparison
                 backgroundImage: _urlImageRetrieved != null
                     ? NetworkImage(_urlImageRetrieved)
                     : null,

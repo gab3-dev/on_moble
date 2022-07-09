@@ -24024,7 +24024,7 @@ kotlin.KotlinVersion:
     public static final kotlin.KotlinVersion$Companion Companion
 io.grpc.ClientInterceptors:
     private static final io.grpc.ClientCall NOOP_CALL
-io.flutter.plugin.platform.PlatformView$-CC
-io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
-androidx.lifecycle.DefaultLifecycleObserver$-CC
 io.flutter.plugin.common.BinaryMessenger$-CC
+io.flutter.plugin.platform.PlatformView$-CC
+androidx.lifecycle.DefaultLifecycleObserver$-CC
+io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
