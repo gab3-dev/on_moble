@@ -112,6 +112,9 @@ class _ConfigurationState extends State<Configuration> {
 
     if (data["urlImage"] != null) {
       _urlImageRetrieved = data["urlImage"];
+      setState(() {
+        _urlImageRetrieved = data["urlImage"];
+      });
     }
   }
 

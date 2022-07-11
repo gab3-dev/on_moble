@@ -1,4 +1,4 @@
-#Sat Jul 09 17:22:31 BRT 2022
+#Mon Jul 11 18:58:07 BRT 2022
 base.2=C\:\\Users\\bruno\\Downloads\\on_moble\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
 path.2=classes3.dex
 base.1=C\:\\Users\\bruno\\Downloads\\on_moble\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
